@@ -310,6 +310,18 @@ For each STEP-XX:
 
 ---
 
+# Tooling Validation for Significant STEPs (mypy & flake8)
+
+For every **significant STEP** (new feature, structural refactor, infrastructure change),
+it is recommended to include static analysis as part of the validation phase.
+
+### Recommended commands
+
+From the repository root, with the virtualenv active:
+
+```bash
+mypy backend
+flake8 backend
 # Final Reminder
 
 This repository is governed by ADRs.

@@ -74,6 +74,7 @@ You MUST enforce:
 - PostgreSQL is production engine.
 - Django ORM is abstraction.
 - For bootstrap, default SQLite is acceptable.
+- SQLite usage in this step is a temporary bootstrap exception and not production compliant with ADR-002.
 - No engine-specific logic outside infrastructure.
 
 ## Horizontal Scaling (ADR-009)
@@ -88,6 +89,8 @@ You MUST enforce:
 - No API keys.
 - No hardcoded credentials.
 - No JWT keys.
+- In development, SECRET_KEY may be generated at runtime for convenience.
+- Production always requires explicit environment configuration.
 
 Architecture > Prompt > Code.
 

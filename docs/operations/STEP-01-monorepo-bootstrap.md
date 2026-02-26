@@ -12,6 +12,20 @@ This step focuses on **structure only**, not business logic.
 
 ---
 
+## ADR-002 Bootstrap Exception (SQLite Scope)
+
+For STEP-01 only, SQLite is allowed exclusively for local bootstrap and
+lightweight local checks.
+
+Constraints:
+
+- PostgreSQL remains the only production database engine.
+- Production settings must target PostgreSQL.
+- No production deployment may rely on SQLite.
+- No engine-specific logic may be introduced outside infrastructure.
+
+---
+
 ## Related ADRs
 
 This step MUST respect:

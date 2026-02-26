@@ -21,7 +21,7 @@ Authoritative sources, in descending order:
 
 1. `/docs/adr/*.md` — Accepted Architecture Decision Records (highest authority)
 2. `/docs/architecture/*.md` — Detailed architectural specifications
-3. `ARCHITECTURE.md` — High-level system overview
+3. `/docs/architecture/ARCHITECTURE.md` — High-level system overview
 4. `/docs/features/Features*.md` — Feature-level functional specifications
 
 Rules:

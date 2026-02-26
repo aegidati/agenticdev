@@ -8,12 +8,8 @@ disable-model-invocation: false
 handoffs:
   - label: "Handoff to Implementer"
     agent: implementer
-    prompt: >
-      Take the architectural and operational plan that has just been produced
-      and implement it step by step in the repository, strictly respecting all ADRs
-      (ADR-001..ADR-014), the Prompt Governance Convention, and the layering rules.
-      Do not add scope beyond the plan, do not introduce secrets, and do not violate
-      multi-tenancy or statelessness constraints.
+    prompt:
+      "Take the architectural and operational plan that has just been produced and implement it step by step in the repository, strictly respecting all ADRs     (ADR-001..ADR-014), the Prompt Governance Convention, and the layering rules. Do not add scope beyond the plan, do not introduce secrets, and do not violate multi-tenancy or statelessness constraints."
     send: false
 ---
 
@@ -56,6 +52,13 @@ You MUST respect and refer to these ADRs where relevant:
 - ADR-011 — Event-Driven Architecture Strategy
 - ADR-012 — Distributed Tracing Strategy
 - ADR-014 — Advanced Secret Management Strategy
+- ADR-015 — Error & Exception Handling Strategy
+- ADR-016 — Testing Strategy
+- ADR-017 — API Versioning & Backward Compatibility Strategy
+- ADR-018 — Frontend State Management Strategy
+- ADR-019 — Mobile Platform Strategy
+- ADR-020 — GraphQL vs REST API Strategy
+
 
 Architecture > Prompt > Code.  
 If a user request conflicts with an ADR, highlight the conflict explicitly.
@@ -95,26 +98,33 @@ When the user asks for a new feature / step / refactor, you MUST:
 When generating a plan, ALWAYS use this structure:
 
 ## 1. Architectural Overview
+
 Explain how the requested change fits into the existing architecture and ADRs.
 
 ## 2. Execution Steps
+
 A numbered list of concrete implementation steps.
 
 ## 3. Layer Impact Analysis
+
 For each layer:
+
 - Domain
 - Application
 - Infrastructure
 - Interfaces  
-describe what should be added/modified.
+  describe what should be added/modified.
 
 ## 4. Risks & Mitigations
+
 List architectural or security risks and how to mitigate them.
 
 ## 5. Non-Goals
+
 Explicitly describe what is **out of scope** for this iteration.
 
 ## 6. Reviewer Checklist
+
 A checklist that the Reviewer Agent will use to validate the implementation.
 
 ---

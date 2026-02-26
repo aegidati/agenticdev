@@ -328,3 +328,78 @@ This repository is governed by ADRs.
 
 Agents are tools.
 Architecture is the law.
+
+```
+## Operational STEP Definition of Done Requirement
+
+Every operational STEP document MUST contain its own explicit
+"Definition of Done" section.
+
+This is a mandatory governance rule.
+
+### 1. Purpose
+
+The Definition of Done (DoD) of a STEP:
+
+- Defines the acceptance criteria for that specific STEP.
+- Establishes measurable completion conditions.
+- Enables objective review by the Reviewer Agent.
+- Prevents ambiguity between consecutive STEPs.
+
+Without a STEP-specific DoD, review and validation are not allowed.
+
+---
+
+### 2. Placement Rule
+
+The Definition of Done section MUST:
+
+- Be located inside the STEP document itself.
+- Appear as a dedicated section titled:
+
+    ## Definition of Done — STEP-XX
+
+- Be placed as the final section of the document.
+
+The DoD must not be stored in a separate file.
+
+---
+
+### 3. Scope Rule
+
+Each STEP DoD MUST:
+
+- Only validate responsibilities belonging to that STEP.
+- Explicitly exclude responsibilities owned by other STEPs.
+- Avoid overlapping validation criteria.
+
+Example:
+
+- STEP-00 validates local environment only.
+- STEP-01 validates repository structure and bootstrap.
+- STEP-02 validates infrastructure baseline.
+
+Cross-STEP validation is a governance violation.
+
+---
+
+### 4. Reviewer Enforcement Rule
+
+The Reviewer Agent MUST:
+
+- Validate execution strictly against the STEP-specific DoD.
+- Classify violations as P1 or P2.
+- Reject a STEP that lacks an explicit DoD section.
+
+If a STEP document does not contain a DoD,
+the Reviewer MUST stop execution and request correction.
+
+---
+
+### 5. Architectural Invariant
+
+The existence of a STEP-specific Definition of Done
+is a structural invariant of this repository.
+
+Any new STEP introduced without a DoD section
+is considered incomplete by design.

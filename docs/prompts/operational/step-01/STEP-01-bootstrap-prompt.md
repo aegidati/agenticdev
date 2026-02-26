@@ -1,287 +1,184 @@
-# STEP 01 — Monorepo Bootstrap (Governed Copilot Execution Prompt)
+# STEP-01 — Monorepo Bootstrap (Operational Prompt)
 
-## Copilot Mode
+## Agent: Planner
 
-Use: **Agent Mode**
+This document is a self-contained operational manifest.
 
-Run this prompt from the root of the repository in VS Code.
+When invoked by the Planner Agent, you MUST:
+
+1. Read all required context files listed below.
+2. Produce a structured execution plan.
+3. NOT generate implementation code.
+4. Respect all architectural invariants and ADRs.
+5. Prepare a Reviewer checklist.
+6. Prepare for structured handoff to Implementer.
 
 ---
 
-## Objective
+# 1. Required Context (MANDATORY READ)
 
-Create the initial monorepo structure and bootstrap a Django backend project, strictly aligned with the defined ADRs and the Prompt Governance Convention.
+Before generating the plan, you MUST read:
 
-This step establishes structural foundations only.
+- docs/operations/STEP-01-monorepo-bootstrap.md
+- docs/architecture/PROMPT-GOVERNANCE-CONVENTION.md
+- docs/operations/AGENTIC-WORKFLOW-PLAYBOOK.md
+- docs/adr/ADR-001-multi-tenancy-isolation-strategy.md
+- docs/adr/ADR-002-database-engine-strategy.md
+- docs/adr/ADR-009-horizontal-scaling-and-load-balancing-strategy.md
+
+If any of these files are missing, explicitly state it.
+
+Do NOT proceed without loading context.
+
+---
+
+# 2. Objective
+
+Initialize the structural foundation of the monorepo:
+
+- Django backend bootstrap
+- Strict layered structure
+- Multi-tenant ready foundation
+- Stateless-ready architecture
+- Governance-compliant structure
+
+This step establishes structure only.
 
 No business logic.
-No infrastructure configuration.
+No infrastructure integrations.
 No authentication.
 No background jobs.
 
-Architecture before implementation.
-
 ---
 
-## Mandatory ADR Compliance
+# 3. Architectural Invariants (NON-NEGOTIABLE)
 
-You MUST comply with:
+You MUST enforce:
 
-- ADR-001 — Multi-Tenancy Isolation Strategy
-- ADR-002 — Database Engine Strategy
-- ADR-009 — Horizontal Scaling & Load Balancing Strategy
+## Layering
 
-You MUST NOT violate:
-
-- ADR-006 — Background Job Processing Strategy
-- ADR-011 — Event-Driven Architecture Strategy
-- ADR-012 — Distributed Tracing Strategy
-- ADR-014 — Advanced Secret Management Strategy
-
-You must assume that `PROMPT-GOVERNANCE-CONVENTION.md` exists and governs this execution.
-
----
-
-## Architectural Constraints
-
-You MUST enforce the following structural rules:
-
-### 1. Layer Separation
-
-Under `backend/`, create the following folders:
-
-- domain/
-- application/
-- infrastructure/
-- interfaces/
-- settings/
-
-Rules:
-
-- `domain/` MUST NOT import Django, ORM, infrastructure, or interfaces.
-- `infrastructure/` MAY depend on domain.
-- `interfaces/` MUST NOT contain business logic.
-- `application/` will orchestrate domain + infrastructure.
+- backend/domain MUST NOT import Django, ORM, infrastructure, or interfaces.
+- backend/infrastructure MAY depend on domain.
+- backend/interfaces MUST NOT contain business logic.
+- backend/application orchestrates use cases only.
 - No circular dependencies.
 
----
+## Multi-Tenancy (ADR-001)
 
-### 2. Stateless Web Discipline (ADR-009)
-
-- Do NOT introduce session-based logic.
-- Do NOT configure in-memory storage.
-- No assumptions about sticky sessions.
-
----
-
-### 3. Tenant Awareness (ADR-001)
-
-- Do NOT implement tenant logic yet.
-- Structure must allow tenant-aware repositories later.
+- Structure must allow future tenant-aware repositories.
 - No global mutable state.
+- No cross-tenant assumptions.
 
----
+## Database Strategy (ADR-002)
 
-### 4. Secrets (ADR-014)
+- PostgreSQL is production engine.
+- Django ORM is abstraction.
+- For bootstrap, default SQLite is acceptable.
+- No engine-specific logic outside infrastructure.
 
-- Do NOT create `.env`.
-- Do NOT add credentials.
-- Do NOT embed secrets in settings.
-- Use Django default SQLite config for now (temporary and acceptable for bootstrap).
+## Horizontal Scaling (ADR-009)
 
----
+- Stateless web discipline.
+- No in-memory session reliance.
+- No process-level business state.
 
-### 5. No Business Logic
+## Secrets (ADR-014)
 
-- Only placeholder modules.
-- Only structure.
-- Only minimal Django bootstrapping.
-
----
-
-## Tasks
-
-### Step 1 — Create Backend Folder
-
-If not existing:
-
-- Create `backend/`.
-
----
-
-### Step 2 — Initialize Django Project
-
-Inside `backend/`:
-
-- Initialize a Django project (e.g. project name: `core`).
-- Ensure:
-  - `backend/manage.py` exists.
-  - `backend/core/` exists.
-
-Do NOT create Django apps yet.
-
----
-
-### Step 3 — Create Layered Structure
-
-Inside `backend/`, create:
-
-- domain/
-- application/
-- infrastructure/
-- interfaces/
-- settings/
-
-Each must contain:
-
-- `__init__.py`
-
----
-
-### Step 4 — Create Placeholder Modules
-
-Create the following files:
-
-#### backend/domain/events.py
-
-- Define a minimal `DomainEvent` base class.
-- It must NOT import Django.
-- Use a simple Python class or dataclass.
-- Add docstring referencing ADR-011.
-
----
-
-#### backend/application/services.py
-
-- Add explanatory docstring:
-  - This layer orchestrates use cases.
-  - It coordinates domain + infrastructure.
-  - It is ADR-001 compliant (tenant-aware).
-
-No implementation logic.
-
----
-
-#### backend/infrastructure/repositories.py
-
-- Add explanatory docstring:
-  - This module will implement ORM-backed repositories.
-  - Must enforce tenant isolation (ADR-001).
-  - Must comply with ADR-002.
-
-No implementation logic.
-
----
-
-#### backend/interfaces/api.py
-
-- Add explanatory docstring:
-  - This module will expose REST endpoints.
-  - No business logic allowed.
-  - Must remain stateless (ADR-009).
-
-Do NOT implement actual endpoints.
-
----
-
-### Step 5 — Settings Restructuring
-
-Under `backend/settings/`, create:
-
-- __init__.py
-- base.py
-
-Move minimal Django settings into `settings/base.py`.
-
-Modify the main Django settings loader to import from `settings.base`.
-
-Ensure:
-
-- Project still runs.
-- No secrets introduced.
-- SQLite default DB acceptable for bootstrap only.
-
----
-
-### Step 6 — Validation
-
-Ensure:
-
-- `python backend/manage.py check` runs without errors.
-- No import errors between layers.
-- Django server can start.
-
----
-
-## Non-Goals (Hard Constraints)
-
-You MUST NOT:
-
-- Create Django models.
-- Configure Celery.
-- Add Redis.
-- Add JWT.
-- Add REST Framework.
-- Add Feature Flags.
-- Add Event Bus.
-- Add Outbox pattern.
-- Add tracing middleware.
-- Add third-party packages beyond Django default.
-
----
-
-## Expected Repository Structure
-
-After execution, repository should resemble:
-
-root/
-│
-├── backend/
-│   ├── manage.py
-│   ├── core/
-│   ├── domain/
-│   ├── application/
-│   ├── infrastructure/
-│   ├── interfaces/
-│   └── settings/
-│
-├── frontend/
-│   ├── web/
-│   └── mobile/
-│
-├── packages/
-│
-└── docs/
-
----
-
-## Post-Execution Report (Mandatory)
-
-After proposing changes, you MUST:
-
-1. List all created files.
-2. List modified files.
-3. Confirm explicitly:
-
-   - Domain layer does NOT import Django.
-   - No circular dependencies.
-   - No secrets introduced.
-   - Architecture remains ADR-compliant.
-
-4. Suggest manual verification steps:
-
-   - Run `python backend/manage.py check`
-   - Run `python backend/manage.py runserver`
-   - Inspect imports between layers.
-
-If any suggestion violates ADR or governance rules,
-you MUST correct it before finalizing.
-
----
-
-## Final Reminder
+- No secrets.
+- No API keys.
+- No hardcoded credentials.
+- No JWT keys.
 
 Architecture > Prompt > Code.
 
-You are not just generating code.
-You are implementing an architectural foundation.
+---
+
+# 4. Expected Output Structure (MANDATORY FORMAT)
+
+You MUST produce the plan using this exact structure:
+
+## 1. Architectural Overview
+
+Explain how STEP-01 fits into the architecture and ADRs.
+
+## 2. Execution Steps
+
+Numbered, ordered list of implementation actions.
+
+## 3. Layer Impact Analysis
+
+Describe impact on:
+
+- Domain
+- Application
+- Infrastructure
+- Interfaces
+- Settings
+
+## 4. Risks & Mitigations
+
+Identify architectural risks and mitigation strategies.
+
+## 5. Non-Goals
+
+Explicitly list what will NOT be implemented in STEP-01.
+
+## 6. Reviewer Checklist
+
+Produce a strict checklist covering:
+
+- Layer violations
+- Tenant isolation
+- Secret exposure
+- Stateless discipline
+- Circular dependencies
+
+---
+
+# 5. Handoff Preparation
+
+At the end of the plan, include:
+
+## Implementer Handoff Block
+
+Summarize:
+
+- Active ADR constraints
+- Non-goals
+- Validation commands to run
+- Scope boundaries
+
+Do NOT implement anything.
+
+The next step must be:
+Planner → Implementer (via structured handoff).
+
+---
+
+# 6. Invocation Pattern
+
+This prompt is designed to be invoked as:
+
+@planner Plan docs/prompts/operational/step-01/STEP-01-bootstrap-prompt.md
+
+It must work without additional instructions.
+
+---
+
+# 7. Enforcement Clause
+
+If the requested action conflicts with:
+
+- Any ADR
+- Prompt Governance Convention
+- Agentic Workflow Playbook
+
+You MUST:
+
+1. Explicitly highlight the conflict.
+2. Refuse unsafe planning.
+3. Propose an ADR-compliant alternative.
+
+---
+
+# End of STEP-01 Operational Prompt

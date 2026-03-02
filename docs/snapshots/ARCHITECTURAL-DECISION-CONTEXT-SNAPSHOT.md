@@ -48,9 +48,13 @@ Layered architecture:
 
 ---
 
-## ADR Coverage (Accepted Decisions)
+## ADR Coverage (Defined ADRs)
 
-This snapshot is aligned with the current ADR inventory:
+The system currently defines the following Architectural Decision Records (ADR-001…ADR-020).
+
+Each ADR’s **status** (Proposed, Accepted, Superseded, etc.) is defined only in its own ADR document under `docs/adr` and that is the authoritative source for its current state.
+
+This snapshot lists the ADRs for orientation and coverage only, without redefining their status.
 
 - ADR-001 — Multi-Tenancy Isolation Strategy
 - ADR-002 — Database Engine Strategy

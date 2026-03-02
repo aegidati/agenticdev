@@ -6,7 +6,7 @@
 
 ## Governance
 - governance/DEFINITION-OF-DONE-TEMPLATE.md
-- governance/PROMPT-GOVERNANCE-CONVENTION.md
+- prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md
 
 ## Operations
 - operations/AGENTIC-WORKFLOW-PLAYBOOK.md

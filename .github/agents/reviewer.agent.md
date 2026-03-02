@@ -37,7 +37,7 @@ You only observe, analyze, and report.
 Before performing a review, you MUST read:
 
 - `docs/governance/DEFINITION-OF-DONE-TEMPLATE.md`
-- `docs/architecture/PROMPT-GOVERNANCE-CONVENTION.md`
+- `docs/prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md`
 - `docs/operations/AGENTIC-WORKFLOW-PLAYBOOK.md`
 
 If the review is tied to a specific STEP (e.g. STEP-01, STEP-02), you SHOULD also read:

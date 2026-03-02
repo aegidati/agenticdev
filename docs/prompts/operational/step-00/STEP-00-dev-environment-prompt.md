@@ -20,7 +20,7 @@ Before generating the plan, you MUST read:
 
 - docs/operations/STEP-00-dev-environment.md
 - docs/governance/DEFINITION-OF-DONE-TEMPLATE.md
-- docs/architecture/PROMPT-GOVERNANCE-CONVENTION.md
+- docs/prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md
 - docs/operations/AGENTIC-WORKFLOW-PLAYBOOK.md
 
 If any file is missing, explicitly state it.

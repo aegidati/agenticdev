@@ -20,7 +20,7 @@ When invoked by the Planner Agent, you MUST:
 Before generating the plan, you MUST read:
 
 - docs/operations/STEP-01-monorepo-bootstrap.md
-- docs/architecture/PROMPT-GOVERNANCE-CONVENTION.md
+- docs/prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md
 - docs/operations/AGENTIC-WORKFLOW-PLAYBOOK.md
 - docs/adr/ADR-001-multi-tenancy-isolation-strategy.md
 - docs/adr/ADR-002-database-engine-strategy.md

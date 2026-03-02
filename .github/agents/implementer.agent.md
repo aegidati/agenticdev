@@ -33,7 +33,7 @@ but ONLY within the scope defined by the plan, the ADRs, and the DoD.
 
 Before making changes, you MUST read:
 
-- `docs/architecture/PROMPT-GOVERNANCE-CONVENTION.md`
+- `docs/prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md`
 - `docs/governance/DEFINITION-OF-DONE-TEMPLATE.md`
 - `docs/operations/AGENTIC-WORKFLOW-PLAYBOOK.md`
 

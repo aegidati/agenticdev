@@ -19,11 +19,11 @@ When invoked by the Planner Agent, you MUST:
 
 Before generating the plan, you MUST read:
 
-- docs/operations/STEP-01-monorepo-bootstrap.md
+- docs/operations/step-01/STEP-01-monorepo-bootstrap.md
 - docs/prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md
 - docs/operations/AGENTIC-WORKFLOW-PLAYBOOK.md
-- docs/adr/ADR-001-multi-tenancy-isolation-strategy.md
-- docs/adr/ADR-002-database-engine-strategy.md
+- docs/adr/ADR-001-multi-tenancy.md
+- docs/adr/ADR-002-database-engine.md
 - docs/adr/ADR-009-horizontal-scaling-and-load-balancing-strategy.md
 
 If any of these files are missing, explicitly state it.

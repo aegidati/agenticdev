@@ -193,7 +193,7 @@ Tenant isolation strategies may include:
 
 The chosen strategy is defined in:
 
-* `/docs/adr/ADR-XXX-multi-tenancy-strategy.md`
+* `/docs/adr/ADR-001-multi-tenancy.md`
 * `/docs/architecture/multi-tenancy.md`
 
 The architecture must allow strategy evolution through ADR without structural rewrite.
@@ -276,7 +276,7 @@ Defined in:
 
 * `/docs/architecture/logging.md`
 * `/docs/architecture/observability.md`
-* `/docs/architecture/configuration.md`
+* `/docs/architecture/configurations.md`
 * `/docs/architecture/api-versioning.md`
 
 All cross-cutting concerns must respect layered architecture and multi-tenant constraints.

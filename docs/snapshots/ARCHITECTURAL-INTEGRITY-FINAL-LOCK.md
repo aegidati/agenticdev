@@ -252,4 +252,4 @@ Any future change that affects architecture MUST:
 
 ---
 
-_Last updated: [replace with current date when committing]_
+_Last updated: 2 marzo 2026_

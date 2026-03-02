@@ -149,7 +149,7 @@ For any new STEP:
 
 ### Planner
 
-@planner Plan docs/prompts/operational/step-XX/STEP-XX-<example>-prompt.md
+@planner Plan <path-to-operational-prompt.md>
 
 ---
 
@@ -164,7 +164,7 @@ For any new STEP:
 Handoff to @reviewer
 
 Review the execution of STEP-XX according to:
-- docs/operations/step-XX/STEP-XX-<example>.md
+- <path-to-step-document.md>
 - Definition of Done — STEP-XX
 - Relevant ADRs
 - Prompt Governance Convention

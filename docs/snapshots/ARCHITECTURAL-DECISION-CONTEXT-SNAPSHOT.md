@@ -50,7 +50,7 @@ Layered architecture:
 
 ## ADR Coverage (Defined ADRs)
 
-The system currently defines the following Architectural Decision Records (ADR-001…ADR-020).
+The system currently defines the following Architectural Decision Records (ADR-001…ADR-021).
 
 Each ADR’s **status** (Proposed, Accepted, Superseded, etc.) is defined only in its own ADR document under `docs/adr` and that is the authoritative source for its current state.
 
@@ -76,6 +76,7 @@ This snapshot lists the ADRs for orientation and coverage only, without redefini
 - ADR-018 — Migration & Schema Evolution Policy
 - ADR-019 — Observability & Logging Contract
 - ADR-020 — Code Style & Formatting Governance
+- ADR-021 — Project Initialization & Validation Policy
 
 ---
 
@@ -85,7 +86,7 @@ The complete structured overview of all ADR documents is available in:
 
 docs/adr/ADR-INDEX.md
 
-This index must always reflect the full set of ADR-001…ADR-XXX.
+This index must always reflect the full set of ADR-001…ADR-021 (and any future ADRs).
 
 Snapshot must remain aligned with docs/adr/ADR-INDEX.md at all times.
 

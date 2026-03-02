@@ -251,7 +251,7 @@ Rules:
 
 - Do not alter ADR meaning.
 - Convert normative architecture text into references such as:
-  “As defined in ADR-XXX…”
+   “As defined in the relevant ADR…”
 - Add missing “Related ADRs” sections.
 - Normalize structure and formatting.
 

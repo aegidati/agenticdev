@@ -66,11 +66,11 @@ Use it to restore context in future sessions.
 # How to Execute a STEP
 
 1. Read the corresponding STEP document in:
-   docs/operations/step-XX/
+   docs/operations/<step-folder>/
 
 2. Invoke Planner:
 
-   @planner Plan docs/prompts/operational/step-XX/<prompt>.md
+   @planner Plan <path-to-operational-prompt.md>
 
 3. Review and approve the plan.
 

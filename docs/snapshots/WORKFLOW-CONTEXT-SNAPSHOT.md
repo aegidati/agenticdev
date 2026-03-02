@@ -32,10 +32,12 @@ AgenticDev Template
 ### Authority Hierarchy
 
 1. ADR documents (source of truth)
-2. Snapshot documents
-3. Architecture documents
-4. Operations & Prompts
-5. Code implementation
+2. Definition of Done
+3. Prompt Governance Convention
+4. STEP operational documents and operations playbooks
+5. Architecture documents
+6. Operational prompts
+7. Snapshots
 
 No document may override an ADR.
 

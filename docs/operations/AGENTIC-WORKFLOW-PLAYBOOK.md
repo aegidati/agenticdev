@@ -265,6 +265,8 @@ Must provide:
 
 ### Phase 3 — Review
 
+For the first business feature in a generated project, Reviewer must verify ADR-021 compliance.
+
 Invoke:
 
 @documentation-guardian Review documentation changes
@@ -280,6 +282,8 @@ The output must validate:
 ---
 
 ## 6. Feature Workflow (STEP-FEAT-XX)
+
+Before starting any business feature (FEAT-01+), STEP-FEAT-00 must be completed in compliance with ADR-021.
 
 For each feature:
 

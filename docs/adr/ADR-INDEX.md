@@ -53,6 +53,9 @@ It only organizes and summarizes them.
 - **ADR-005 — API Rate Limiting Strategy**  
   Defines centralized rate limiting and tenant-aware enforcement.
 
+- **ADR-021 — Project Initialization & Validation Policy**
+  Defines mandatory validation (STEP-FEAT-00) before starting business features in generated projects.
+
 ---
 
 # Scalability & Runtime Behavior

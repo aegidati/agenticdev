@@ -17,12 +17,15 @@ It defines:
 
 This document does NOT override Architecture Decision Records (ADRs) or detailed architecture documents.
 
-Authoritative sources:
+Reference hierarchy for this document:
 
 1. `/docs/adr/*.md`
-2. `/docs/architecture/*.md`
+2. `/docs/governance/DEFINITION-OF-DONE-TEMPLATE.md`
+3. `/docs/prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md`
+4. `/docs/operations/*.md`
+5. `/docs/architecture/*.md`
 
-In case of conflict, ADRs and architecture documents prevail.
+In case of conflict, follow the hierarchy above; ADRs prevail.
 
 ---
 

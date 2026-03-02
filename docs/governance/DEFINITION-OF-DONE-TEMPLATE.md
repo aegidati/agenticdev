@@ -12,7 +12,7 @@ This document defines the mandatory completion criteria for any:
 
 No change is considered complete until this checklist is satisfied.
 
-Architecture > Prompt > Code.
+Authority hierarchy: ADR > Definition of Done > Prompt Governance Convention > Operations > Architecture > Operational prompts > Snapshots.
 
 ---
 

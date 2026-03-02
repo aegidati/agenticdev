@@ -146,12 +146,34 @@ From strongest to descriptive:
 1. ADR documents  
 2. Definition of Done  
 3. Prompt Governance Convention  
-4. Architecture documents  
-5. STEP operational documents  
+4. STEP operational documents and operations playbooks  
+5. Architecture documents  
 6. Operational prompts  
 7. Snapshots  
 
 No document may override an ADR.
+
+---
+
+## ADR Index Usage
+
+The document `/adr/ADR-INDEX.md` provides the structured overview of all architectural decisions.
+
+Before starting any:
+
+- New STEP
+- Feature STEP
+- Major refactor
+- Documentation alignment
+
+The Planner and Documentation Guardian must consult ADR-INDEX to ensure:
+
+- No decision duplication
+- No architectural rule redefinition
+- No missing ADR reference
+- Full coverage awareness
+
+ADR-INDEX is mandatory reading for all architectural evolution work.
 
 ---
 

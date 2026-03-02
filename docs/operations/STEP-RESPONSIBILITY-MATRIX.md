@@ -24,9 +24,9 @@ Cross-STEP validation is a governance violation.
 | STEP-01 | Monorepo structure and Django bootstrap | Feature logic, auth, caching, rate limiting | ADR-001, ADR-002, ADR-009, ADR-014 |
 | STEP-02 | Infrastructure baseline (DB wiring, settings discipline) | Business logic, feature endpoints | ADR-002, ADR-009, ADR-014 |
 | STEP-03 | Authentication core implementation | Authorization logic, feature flags | ADR-003 |
-| STEP-04 | Authorization model | Background jobs, caching | ADR-003 |
-| STEP-05 | Caching layer introduction | Business logic changes | ADR-004 |
-| STEP-06 | Rate limiting implementation | Feature logic changes | ADR-005 |
+| STEP-04 | Multi-tenant infrastructure layer | Tenant onboarding flows, billing/quotas, frontend/mobile integration | ADR-001, ADR-002, ADR-010 |
+| STEP-05 | Repository & service pattern foundation | New business features, tenant onboarding flows, CI/CD changes | ADR-001, ADR-002, ADR-017 |
+| STEP-06 | Testing infrastructure & quality gates | Frontend tests, E2E browser tests, performance/load testing | ADR-016, ADR-001, ADR-003, ADR-015, ADR-020 |
 | STEP-07 | Background job processing | API feature logic | ADR-006 |
 | STEP-08 | Feature flag system | Business logic refactoring | ADR-007 |
 | STEP-09 | Audit logging & compliance | Domain logic changes | ADR-008 |

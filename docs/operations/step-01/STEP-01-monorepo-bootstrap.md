@@ -52,7 +52,7 @@ This step MUST comply with:
 In particular:
 
 - Prompts must explicitly list related ADRs.
-- Architecture > Prompt > Code.
+- Authority follows the documented hierarchy: ADR > Definition of Done > Prompt Governance Convention > Operations > Architecture > Operational prompts > Snapshots.
 - No cross-layer shortcuts.
 - No secrets hardcoded.
 

@@ -18,7 +18,7 @@ When invoked by the Planner Agent, you MUST:
 
 Before generating the plan, you MUST read:
 
-- docs/operations/STEP-00-dev-environment.md
+- docs/operations/step-00/STEP-00-dev-environment.md
 - docs/governance/DEFINITION-OF-DONE-TEMPLATE.md
 - docs/prompts/governance/PROMPT-GOVERNANCE-CONVENTION.md
 - docs/operations/AGENTIC-WORKFLOW-PLAYBOOK.md

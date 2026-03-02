@@ -92,7 +92,7 @@ You MUST enforce:
 - In development, SECRET_KEY may be generated at runtime for convenience.
 - Production always requires explicit environment configuration.
 
-Architecture > Prompt > Code.
+Authority follows the documented hierarchy: ADR > Definition of Done > Prompt Governance Convention > Operations > Architecture > Operational prompts > Snapshots.
 
 ---
 

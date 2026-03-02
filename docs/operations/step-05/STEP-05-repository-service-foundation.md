@@ -18,7 +18,7 @@ The goal is to prevent:
 - Direct ORM usage from higher layers.
 - Tight coupling between infrastructure and domain logic.
 
-This STEP creates the structural backbone that all future feature STEPs MUST follow.
+This STEP applies and operationalizes existing architectural constraints for repository and service layering.
 
 No new business features are implemented here.
 
@@ -80,9 +80,9 @@ This STEP builds on:
 
 ---
 
-## 4. Layer Responsibilities (Authoritative Definition)
+## 4. Layer Responsibilities (Applied from ADRs and Architecture)
 
-This STEP formally defines layer contracts.
+Layer contracts are applied here as defined in ADRs and architecture documents.
 
 ### 4.1 Domain Layer
 

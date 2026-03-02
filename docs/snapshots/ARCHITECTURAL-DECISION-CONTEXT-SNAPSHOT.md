@@ -10,13 +10,27 @@ It is designed to:
 - Prevent drift from accepted decisions.
 - Provide continuity when resuming work.
 
-It is not a replacement for full documentation.
+It does not replace ADRs, governance, operations, or architecture documents.
 
 ---
 
-# SYSTEM OVERVIEW
+## Authority Reminder
 
-The system is a:
+When conflicts exist, apply the documented hierarchy used across repository governance:
+
+1. ADR documents
+2. Definition of Done
+3. Prompt Governance Convention
+4. STEP operational documents and operations playbooks
+5. Architecture documents
+6. Operational prompts
+7. Snapshots
+
+---
+
+## System Overview
+
+Current documented platform context:
 
 - Fullstack SaaS platform
 - Multi-tenant
@@ -32,135 +46,78 @@ Layered architecture:
 - Infrastructure
 - Interfaces
 
-Architecture precedes code.
+---
+
+## ADR Coverage (Accepted Decisions)
+
+This snapshot is aligned with the current ADR inventory:
+
+- ADR-001 — Multi-Tenancy Isolation Strategy
+- ADR-002 — Database Engine Strategy
+- ADR-003 — JWT Signing & Key Rotation Strategy
+- ADR-004 — Caching Strategy
+- ADR-005 — API Rate Limiting Strategy
+- ADR-006 — Background Job Processing Strategy
+- ADR-007 — Feature Flag & Runtime Configuration Strategy
+- ADR-008 — Audit Logging & Compliance Strategy
+- ADR-009 — Horizontal Scaling & Load Balancing Strategy
+- ADR-010 — Data Governance & Retention Policy
+- ADR-011 — Event-Driven Architecture Strategy
+- ADR-012 — Distributed Tracing Strategy
+- ADR-013 — API Versioning & Backward Compatibility Strategy
+- ADR-014 — Advanced Secret Management Strategy
+- ADR-015 — Error & Exception Handling Strategy
+- ADR-016 — Testing Strategy
+- ADR-017 — Dependency & Package Management Strategy
+- ADR-018 — Migration & Schema Evolution Policy
+- ADR-019 — Observability & Logging Contract
+- ADR-020 — Code Style & Formatting Governance
 
 ---
 
-# MULTI-TENANCY
+## ADR Index Reference
 
-Defined in ADR-001.
+The complete structured overview of all ADR documents is available in:
 
-- Row-level isolation.
-- All tenant-scoped tables include tenant_id.
-- No global tenant state.
-- No cross-tenant queries allowed.
+/adr/ADR-INDEX.md
 
-Tenant isolation is security-critical.
+This index must always reflect the full set of ADR-001…ADR-XXX.
 
----
-
-# DATABASE
-
-Defined in ADR-002.
-
-- PostgreSQL primary engine.
-- Repository abstraction required.
-- DB is source of truth.
-- Migrations version-controlled.
+Snapshot must remain aligned with ADR-INDEX at all times.
 
 ---
 
-# AUTHENTICATION
+## Documented STEP State
 
-Defined in ADR-003.
+Current operational STEP documents present in repository:
 
-- JWT.
-- RS256.
-- kid header.
-- Key rotation supported.
-- Short-lived access tokens.
-- Revocable refresh tokens.
+- STEP-00 — Development Environment Baseline
+- STEP-01 — Monorepo Bootstrap
+- STEP-01A — Documentation Alignment
+- STEP-02 — Infrastructure Baseline
+- STEP-03 — Authentication Skeleton
+- STEP-04 — Multi-Tenant Infrastructure Layer
+- STEP-05 — Repository & Service Pattern Foundation
+- STEP-06 — Testing Infrastructure & Quality Gates
 
----
-
-# AUTHORIZATION
-
-- RBAC.
-- Tenant-scoped roles.
-- Backend enforcement only.
+Scope ownership and exclusions are defined by STEP documents and STEP-RESPONSIBILITY-MATRIX.
 
 ---
 
-# CACHING
+## Architectural Invariants (Derived from ADRs)
 
-Defined in ADR-004.
-
-- Redis.
-- Tenant-aware keys.
-- TTL required.
-- No sensitive data cached.
-
----
-
-# RATE LIMITING
-
-Defined in ADR-005.
-
-- Redis-based.
-- Per user.
-- Per tenant.
-- Per IP.
+1. Tenant isolation is mandatory.
+2. Database remains the source of truth.
+3. Cross-layer shortcuts are not allowed.
+4. Secrets must not be hardcoded.
+5. Structural changes require ADR governance.
 
 ---
 
-# ERROR HANDLING
+## Resume Guidance
 
-Defined in ADR-015.
+To resume architecture work in a new session:
 
-- Structured error format.
-- No stack traces in production.
-- Domain/Application/Infrastructure separation.
-
----
-
-# OBSERVABILITY
-
-Defined in ADR-019.
-
-- Structured logs.
-- tenant_id included.
-- No secrets logged.
-
----
-
-# TESTING
-
-Defined in ADR-016.
-
-- Test pyramid.
-- Tenant isolation tests mandatory.
-- Static checks mandatory.
-
----
-
-# ARCHITECTURAL INVARIANTS
-
-1. Tenant isolation mandatory.
-2. No ORM in presentation layer.
-3. No secrets in frontend.
-4. DB is source of truth.
-5. JWT must use RS256.
-6. No cross-layer shortcuts.
-7. Every structural change requires ADR.
-
----
-
-# MATURITY STATUS
-
-Foundational layer complete:
-
-- Infrastructure baseline.
-- Authentication skeleton.
-- Multi-tenancy.
-- Repository pattern.
-- Testing foundation.
-
-System ready for feature implementation.
-
----
-
-To resume work:
-
-Paste this file at start of new session and state:
-
-"Continue architecture evolution from this snapshot."
+1. Load this snapshot.
+2. Load relevant ADRs and STEP document.
+3. Continue from the next planned operational step or approved feature step.

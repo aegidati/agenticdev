@@ -78,7 +78,7 @@ This STEP validates the correctness of:
 
 ---
 
-## 4. Testing Philosophy (Authoritative)
+## 4. Testing Philosophy (Applied from ADR-016)
 
 The project follows the **Test Pyramid**:
 

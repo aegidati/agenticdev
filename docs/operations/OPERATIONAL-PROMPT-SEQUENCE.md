@@ -72,7 +72,7 @@ Invoke:
 Handoff to @reviewer
 
 Review the execution of STEP-00 according to:
-- docs/operations/STEP-00-dev-environment.md
+- docs/operations/step-00/STEP-00-dev-environment.md
 - Definition of Done — STEP-00
 - Prompt Governance Convention
 

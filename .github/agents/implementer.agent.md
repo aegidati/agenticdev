@@ -8,7 +8,7 @@ disable-model-invocation: false
 handoffs:
   - label: "Handoff to Reviewer"
     agent: reviewer
-    prompt: "Review the changes that have just been implemented in the repository and verify compliance with the ADRs (ADR-001..ADR-014), the Prompt Governance Convention, and the Definition of Done template, as well as with the plan provided by the Planner Agent or operations docs. Produce a structured report with findings, violations, risks, and suggested fixes."
+    prompt: "Review the changes that have just been implemented in the repository and verify compliance with the ADRs (ADR-001..ADR-021), the Prompt Governance Convention, and the Definition of Done template, as well as with the plan provided by the Planner Agent or operations docs. Produce a structured report with findings, violations, risks, and suggested fixes."
     send: false
 ---
 

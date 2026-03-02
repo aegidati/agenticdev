@@ -58,7 +58,7 @@ All ADR files follow naming convention ADR-XXX-*.md.
 
 Strengths:
 - Clear separation of decisions.
-- Coverage complete from ADR-001 to ADR-020.
+- Coverage complete from ADR-001 to ADR-021.
 - Logical evolution sequence.
 
 Issues:
@@ -256,7 +256,7 @@ Status: Good conceptually.
 
 Required fixes:
 
-- Ensure it lists ADR-001 to ADR-020 explicitly.
+- Ensure it lists ADR-001 to ADR-021 explicitly.
 - Ensure it reflects STEP-00 to STEP-06 completed.
 - Add:
 

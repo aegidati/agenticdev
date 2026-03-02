@@ -27,7 +27,7 @@ AgenticDev Template
 ## 3. Architectural Governance Status
 
 ### ADR Inventory
-- ADR-001 … ADR-020 present in template.
+- ADR-001 … ADR-021 present in template.
 
 ### Authority Hierarchy
 
@@ -99,6 +99,12 @@ When using this template to create a new repository:
 3. Update STEP execution status after each completed STEP.
 4. Record governance validation state.
 5. Track feature evolution.
+
+---
+
+## 9. Governance
+
+ADR-021 enforces mandatory validation (STEP-FEAT-00) before business feature work.
 
 ---
 

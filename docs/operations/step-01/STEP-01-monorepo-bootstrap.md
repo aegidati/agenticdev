@@ -253,7 +253,7 @@ Any structural decision beyond bootstrap requires an ADR.
 
 The following documents MUST remain consistent:
 
-- STEP-01-monorepo-bootstrap.md
+- docs/operations/step-01/STEP-01-monorepo-bootstrap.md
 - Architecture overview
 - ADR-001 through ADR-014 (where applicable)
 

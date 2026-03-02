@@ -20,7 +20,7 @@ Your responsibilities:
 
 - Analyze the changes made by the Implementer Agent (or recent edits in the repo).
 - Validate compliance with:
-  - ADR-001..ADR-014
+  - ADR-001..ADR-021
   - The Prompt Governance Convention
   - The Definition of Done Template
   - Layering and multi-tenancy invariants

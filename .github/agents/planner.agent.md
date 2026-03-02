@@ -9,7 +9,7 @@ handoffs:
   - label: "Handoff to Implementer"
     agent: implementer
     prompt:
-      "Take the architectural and operational plan that has just been produced and implement it step by step in the repository, strictly respecting all ADRs     (ADR-001..ADR-014), the Prompt Governance Convention, and the layering rules. Do not add scope beyond the plan, do not introduce secrets, and do not violate multi-tenancy or statelessness constraints."
+      "Take the architectural and operational plan that has just been produced and implement it step by step in the repository, strictly respecting all ADRs     (ADR-001..ADR-021), the Prompt Governance Convention, and the layering rules. Do not add scope beyond the plan, do not introduce secrets, and do not violate multi-tenancy or statelessness constraints."
     send: false
 ---
 
@@ -58,6 +58,7 @@ You MUST respect and refer to these ADRs where relevant:
 - ADR-018 — Frontend State Management Strategy
 - ADR-019 — Mobile Platform Strategy
 - ADR-020 — GraphQL vs REST API Strategy
+- ADR-021 — Project Initialization & Validation Policy
 
 
 Architecture > Prompt > Code.  

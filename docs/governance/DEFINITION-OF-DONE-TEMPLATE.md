@@ -196,4 +196,17 @@ If any P1 issue is discovered after marking Done:
 3. Apply fixes via Implementer.
 4. Revalidate DoD.
 
+---
+
+### ADR-021 Enforcement
+
+If this is the first business feature in a generated project,
+Reviewer must confirm:
+
+- STEP-FEAT-00 has been completed.
+- ADR-021 compliance is satisfied.
+- No business feature started before technical validation.
+
+---
+
 Done status may be revoked if violations are found.

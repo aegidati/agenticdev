@@ -157,7 +157,7 @@ No document may override an ADR.
 
 ## ADR Index Usage
 
-The document `/adr/ADR-INDEX.md` provides the structured overview of all architectural decisions.
+The document `docs/adr/ADR-INDEX.md` provides the structured overview of all architectural decisions.
 
 Before starting any:
 
@@ -166,14 +166,14 @@ Before starting any:
 - Major refactor
 - Documentation alignment
 
-The Planner and Documentation Guardian must consult ADR-INDEX to ensure:
+The Planner and Documentation Guardian must consult docs/adr/ADR-INDEX.md to ensure:
 
 - No decision duplication
 - No architectural rule redefinition
 - No missing ADR reference
 - Full coverage awareness
 
-ADR-INDEX is mandatory reading for all architectural evolution work.
+docs/adr/ADR-INDEX.md is mandatory reading for all architectural evolution work.
 
 ---
 

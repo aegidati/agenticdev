@@ -41,8 +41,11 @@ It only organizes and summarizes them.
 - **ADR-002 — Database Engine Strategy**  
   Defines primary database engine and abstraction rules.
 
-- **ADR-003 — JWT Signing & Key Rotation Strategy**  
+- **ADR-003 — JWT Signing and Key Rotation Strategy**  
   Defines authentication token strategy and cryptographic rules.
+
+- **ADR-013 — API Versioning & Backward Compatibility Strategy**
+  Defines versioning model and backward compatibility rules.
 
 - **ADR-004 — Caching Strategy**  
   Defines Redis usage and cache authority rules.
@@ -79,7 +82,7 @@ It only organizes and summarizes them.
 - **ADR-010 — Data Governance & Retention Policy**  
   Defines retention rules and lifecycle constraints.
 
-- **ADR-018 — Migration & Schema Evolution Strategy**  
+- **ADR-018 — Database Migration & Schema Evolution Policy**  
   Defines version-controlled schema changes.
 
 ---
@@ -89,7 +92,7 @@ It only organizes and summarizes them.
 - **ADR-014 — Advanced Secret Management Strategy**  
   Defines secret handling and environment segregation.
 
-- **ADR-015 — Error & Exception Handling Strategy**  
+- **ADR-015 — Error & Exception Handling Strategy (API Error Contract)**  
   Defines error layering and exposure rules.
 
 - **ADR-019 — Observability & Logging Contract**  
@@ -98,14 +101,14 @@ It only organizes and summarizes them.
 - **ADR-020 — Code Style & Formatting Governance**  
   Defines static analysis and formatting enforcement.
 
-- **ADR-017 — Dependency Management Strategy**  
+- **ADR-017 — Dependency & Package Management Strategy**  
   Defines dependency constraints and update discipline.
 
 ---
 
 # Testing & Quality
 
-- **ADR-016 — Testing Strategy**  
+- **ADR-016 — Testing Strategy & Test Pyramid**  
   Defines testing pyramid and validation principles.
 
 ---

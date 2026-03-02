@@ -79,11 +79,11 @@ This snapshot is aligned with the current ADR inventory:
 
 The complete structured overview of all ADR documents is available in:
 
-/adr/ADR-INDEX.md
+docs/adr/ADR-INDEX.md
 
 This index must always reflect the full set of ADR-001…ADR-XXX.
 
-Snapshot must remain aligned with ADR-INDEX at all times.
+Snapshot must remain aligned with docs/adr/ADR-INDEX.md at all times.
 
 ---
 
